@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fraktionsakte Generator – LSPD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span> Fraktionsakte <small>Generator</small></div>
+  <div class="actions">
+    <button id="btnNew" class="ghost">Neue Akte</button>
+    <button id="btnLoad" class="ghost">JSON laden</button>
+    <button id="btnSave" class="ghost">JSON speichern</button>
+    <button id="btnPng">PNG exportieren</button>
+    <button id="btnPdf" class="primary">PDF exportieren</button>
+    <input type="file" id="fileJson" accept=".json,application/json" hidden>
+  </div>
+</header>
+<main class="split">
+  <aside id="editor" aria-label="Editor"></aside>
+  <section id="preview" aria-label="Vorschau"><div id="docWrap"></div></section>
+</main>
+<div id="stage" aria-hidden="true"></div>
+<div id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="logo-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
